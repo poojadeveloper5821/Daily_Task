@@ -1,6 +1,10 @@
 .App {
   text-align: center;
 }
+.form {
+  border:2px solid green;
+  padding: 30px;
+}
 
 .App-logo {
   height: 40vmin;

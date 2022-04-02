@@ -1,17 +1,20 @@
  import "./App.css";
- import React, { Component } from "react";
-// // import StateEx from "./Components/StateEx";
- import StateEx2 from "./Components/StateEx2";
- import StateEx3 from "./Components/StateEx3";
- import Color from "./Components/Color";
- import Drinks from "./Components/Drinks";
- import Clickme from "./Components/Clickme";
- import Heading from "./Components/Heading";
- import Para from "./Components/Para";
- import List from "./Components/List";
+ import React from "react";
+//  import StateEx from "./Components/StateEx";
+//  import StateEx2 from "./Components/StateEx2";
+//  import StateEx3 from "./Components/StateEx3";
+//  import Color from "./Components/Color";
+//  import Drinks from "./Components/Drinks";
+//  import Clickme from "./Components/Clickme";
+//  import Heading from "./Components/Heading";
+//  import Para from "./Components/Para";
+//  import List from "./Components/List";
  import Form from "./Components/Form";
- import Table from "./Components/Table";
-import CarouselSlide from "./Components/CarouselSlide";
+//  import Table from "./Components/Table";
+//  import CarouselSlide from "./Components/CarouselSlide";
+//  import Contact from "./Components/Contact";
+//  import Page from "./Components/Page";
+//  import About from "./Components/About";
 // // import Carclass from "./Components/Carclass";
 // // import Specification from "./Components/Specification";
 // // import Props from "./Components/Props";
@@ -48,17 +51,21 @@ import CarouselSlide from "./Components/CarouselSlide";
 function App() {
    return (
     <>
-        <Heading />
+        {/* <Heading />
         <Para />
-        <List />
+        <List /> */}
         <Form />
-        <Table /> 
+        {/* <Table /> 
         <StateEx2 />
         <StateEx3 />
         <Color />
         <Drinks />
        <Clickme />
        <CarouselSlide />
+       <Contact />
+       <Page />
+       <About /> */}
+       
     </>
    );
  }
