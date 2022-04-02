@@ -10,6 +10,7 @@
 //  import Para from "./Components/Para";
 //  import List from "./Components/List";
  import Form from "./Components/Form";
+ import Navbar from "./Components/Navbar";
 //  import Table from "./Components/Table";
 //  import CarouselSlide from "./Components/CarouselSlide";
 //  import Contact from "./Components/Contact";
@@ -54,6 +55,14 @@ function App() {
         {/* <Heading />
         <Para />
         <List /> */}
+        <header className="App-header">
+           <div className="nav-area">
+              <a href="/#" className="logo">MutliLevel-Dropdown</a>
+
+           </div>
+
+        </header>
+        <Navbar/>
         <Form />
         {/* <Table /> 
         <StateEx2 />
