@@ -58,9 +58,7 @@ function App() {
         <header className="App-header">
            <div className="nav-area">
               <a href="/#" className="logo">MutliLevel-Dropdown</a>
-
            </div>
-
         </header>
         <Navbar/>
         <Form />
