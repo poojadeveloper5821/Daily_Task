@@ -9,8 +9,9 @@
 //  import Heading from "./Components/Heading";
 //  import Para from "./Components/Para";
 //  import List from "./Components/List";
- import Form from "./Components/Form";
- import Navbar from "./Components/Navbar";
+ //import Form from "./Components/Form";
+ //import Navbar from "./Components/Navbar";
+import HookuseState from "./Components/HookuseState";
 //  import Table from "./Components/Table";
 //  import CarouselSlide from "./Components/CarouselSlide";
 //  import Contact from "./Components/Contact";
@@ -55,13 +56,13 @@ function App() {
         {/* <Heading />
         <Para />
         <List /> */}
-        <header className="App-header">
-           <div className="nav-area">
-              <a href="/#" className="logo">MutliLevel-Dropdown</a>
-           </div>
-        </header>
-        <Navbar/>
-        <Form />
+        {/* <header className="App-header">
+            <div className="nav-area">
+              <a href="/#" className="logo">MutliLevel-Dropdown</a> 
+           </div> 
+        </header> */}
+        {/* <Navbar/>
+        <Form /> */}
         {/* <Table /> 
         <StateEx2 />
         <StateEx3 />
@@ -73,6 +74,14 @@ function App() {
        <Page />
        <About /> */}
        
+<HookuseState/>
+
+
+
+
+
+
+
     </>
    );
  }
