@@ -81,10 +81,10 @@ function Form() {
      {/*when user submit the form , handleSubmit()
         function will be called .*/}
     <h3> Sign-up Form </h3>
-        <input class="form-control me-2" type="search" placeholder="Search"
+        <input className="form-control me-2" type="search" placeholder="Search"
               aria-label="Search"/>
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
-            <button class="btn btn-outline-secondary" type="submit"> Search </button>
+            <button className="btn btn-outline-secondary" type="submit"> Search </button>
             <br />
             <br />
         <label >
@@ -150,14 +150,14 @@ function Form() {
           </label>
         <br/><br/>
 
-        <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        <div className="dropdown">
+  <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
     Which City you belong?
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item" href="#mumbai">Mumbai</a></li>
-    <li><a class="dropdown-item" href="#hyderabad">Hyderabad</a></li>
-    <li><a class="dropdown-item" href="#pune">Pune</a></li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a className="dropdown-item" href="#mumbai">Mumbai</a></li>
+    <li><a className="dropdown-item" href="#hyderabad">Hyderabad</a></li>
+    <li><a className="dropdown-item" href="#pune">Pune</a></li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
   </ul>
 </div>
 

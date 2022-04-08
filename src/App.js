@@ -9,10 +9,12 @@
 //  import Heading from "./Components/Heading";
 //  import Para from "./Components/Para";
 //  import List from "./Components/List";
- //import Form from "./Components/Form";
+// import Form from "./Components/Form";
+//import Login from "./Components/Login";
+import LoginForm from "./Components/LoginForm";
  //import Navbar from "./Components/Navbar";
-import HookuseState from "./Components/HookuseState";
-import HookuseEffect from "./Components/HookuseEffect";
+//import HookuseState from "./Components/HookuseState";
+//import HookuseEffect from "./Components/HookuseEffect";
 //  import Table from "./Components/Table";
 //  import CarouselSlide from "./Components/CarouselSlide";
 //  import Contact from "./Components/Contact";
@@ -75,11 +77,11 @@ function App() {
        <Page />
        <About /> */}
        
-<HookuseState/>
-<HookuseEffect/>
-
-
-
+{/* <HookuseState/>
+<HookuseEffect/> */}
+{/* <Form/>
+<Login/> */}
+<LoginForm/>
 
 
 

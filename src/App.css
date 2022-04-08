@@ -72,7 +72,7 @@ background-color: #f2f2f2;
       content: "";
       display: inline - block;
       margin-left: 0.28 em;
-      vertical-align: 0.09 em;
+      /* vertical-align: 0.09 em; */
       border-top: 0.42 em solid;
       border-right: 0.32 em solid transparent;
       border-left: 0.32 em solid transparent;
@@ -145,4 +145,35 @@ background-color: #f2f2f2;
   to {
     transform: rotate(360deg);
   }
+}
+input {
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  width: 100%;
+  font-size: 1rem;
+}
+
+input[type="text"] {
+  height: 40px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #999;
+}
+
+input[type="submit"] {
+  background-color: #000000;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  height: 40px;
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+  border-color: #000000;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
 }
