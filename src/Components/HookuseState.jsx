@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 
+
+function intialValue(){
+  console.log("function called");
+  return 0;
+}
+
 function HookuseState() {
     const [name,setName]= useState("dipesh");
     const [flag,setFlag]=useState(false); 
-    const [steps,setSteps]=useState(0);
+    //const [steps,setSteps]=useState(0);
+    const [steps,setSteps]=useState(intialValue());
     const [names,setNames]=useState([]);
-
-
-
-
 
     function changeName(){
         console.log("clicked");
@@ -27,12 +30,6 @@ function HookuseState() {
         setNames([...names,{id:names.length,name}]);
         setName("");
    }  
-
-
-
-
-
-
 
 
 

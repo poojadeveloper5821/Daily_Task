@@ -12,6 +12,7 @@
  //import Form from "./Components/Form";
  //import Navbar from "./Components/Navbar";
 import HookuseState from "./Components/HookuseState";
+import HookuseEffect from "./Components/HookuseEffect";
 //  import Table from "./Components/Table";
 //  import CarouselSlide from "./Components/CarouselSlide";
 //  import Contact from "./Components/Contact";
@@ -75,7 +76,7 @@ function App() {
        <About /> */}
        
 <HookuseState/>
-
+<HookuseEffect/>
 
 
 
