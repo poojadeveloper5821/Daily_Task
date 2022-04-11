@@ -12,6 +12,7 @@
 // import Form from "./Components/Form";
 //import Login from "./Components/Login";
 import LoginForm from "./Components/LoginForm";
+import Store from "./Components/Store";
  //import Navbar from "./Components/Navbar";
 //import HookuseState from "./Components/HookuseState";
 //import HookuseEffect from "./Components/HookuseEffect";
@@ -82,6 +83,7 @@ function App() {
 {/* <Form/>
 <Login/> */}
 <LoginForm/>
+<Store />
 
 
 

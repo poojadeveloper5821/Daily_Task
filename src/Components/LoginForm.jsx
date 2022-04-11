@@ -7,13 +7,16 @@ function LoginForm(){
 
   useEffect(() => {
     // storing input name
-    localStorage.setItem("name", JSON.stringify(username));
+    localStorage.setItem("username", JSON.stringify(username));
   }, [username]);
 
   useEffect(() => {
     // storing input pwd
-    localStorage.setItem("pwd", JSON.stringify(password));
+    localStorage.setItem("password", JSON.stringify(password));
   }, [password]);
+
+  
+
 
   const onSubmitHandler = () => {
     alert("The form was submitted");
