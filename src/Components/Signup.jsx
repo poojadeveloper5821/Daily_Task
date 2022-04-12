@@ -93,8 +93,9 @@ function Signup() {
           value={password} type="password" />
  
         <button onClick={handleSubmit} className="btn" type="submit">
-          Submit
+          Register
         </button>
+        
       </form>
     </div>
   );

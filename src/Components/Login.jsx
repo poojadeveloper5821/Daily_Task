@@ -1,4 +1,5 @@
 import{useState} from "react"
+//import Signup from "./Signup";
 
 function Login(){
     const [user,setUser]=useState();
@@ -49,9 +50,23 @@ const handleSubmit=(e)=>{
 <input type="password" value={confpwd} required onChange={(e)=>
 {handleConfPwdChange(e)}}/>
 
+<button onClick={handleSubmit} className="btn" type="submit">
+          Submit
+        </button> &nbsp;&nbsp;&nbsp;&nbsp;
 
-<input type="submit" value="Submit"/>
+        <p>
+          <buttontoolbar>
+            <button const path = '/Signup'> Register </button>
+          </buttontoolbar>
+        </p>
+
+{/* 
+        <button onClick={handleSubmit} className="btn" type="submit">
+          Register
+        </button> */}
+
         </form>
+       
         </>
     );
 }
