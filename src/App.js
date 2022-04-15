@@ -1,41 +1,30 @@
- import "./App.css";
- import { BrowserRouter as Router,Route,Routes } from "react-router-dom";
- import Login from "./Components/Login";
- import Signup from "./Components/Signup";
- import Error from "./Components/Error";
- 
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Login from "./Components/Login";
+import Signup from "./Components/Signup";
+import Error from "./Components/Error";
+import Dashboard from "./Components/Dashboard";
+
+
+
 function App() {
-    return (
-     <>
-     <Router>
-         <Routes>
-           <Route path="/" element={<Login/>}/>
-           <Route path="/signup" element={<Signup/>}/>
-           <Route element={Error}/>
+  return (
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path='/dashboard' element={<Dashboard />}/>
+          <Route element={<Error/>} />
         </Routes>
-       </Router>
+      </Router>
 
-          </>
-    );
-  }
+    
+    </>
+  );
+}
 
-  export default App;
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
+export default App;
 
 //import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import LoginReg from "./components/pages/auth/LoginReg";
@@ -68,26 +57,7 @@ function App() {
 
 // export default App;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- // // class App extends Component {
+// // class App extends Component {
 // //   render() {
 // //     return (
 // //       <div className="App">
@@ -111,18 +81,3 @@ function App() {
 // //     );
 // //   }
 // // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
