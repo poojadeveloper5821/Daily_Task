@@ -61,7 +61,11 @@ start();
 function Promises() {
   return (
     <>
-      {/* <li>{data.name}</li> */}
+      <ul>
+        {
+          createData.map(data => <li key={data.name}>{data.title}</li>)
+        }
+      </ul>
     </>
   );
 }
