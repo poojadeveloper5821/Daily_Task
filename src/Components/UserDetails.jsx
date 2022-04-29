@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-//import axios from "axios";
 
 const UserDetails = () => {
   const [data, setData] = useState([]);
 
-  const apiGet = () => {
-    fetch("https://jsonplaceholder.typicode.com/users")
+  const apiGet = (id) => {
+    console.log(id);
+    fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
       .then((response) => response.json())
       .then((json) => {
           console.log(json);
@@ -24,17 +24,9 @@ const UserDetails = () => {
     <>
       <h2 text="center">MY API</h2>
       <br />
-      <button onClick={apiGet}>Fetch API</button>
+      {/* <button onClick={apiGet}>Fetch API</button> */}
       <br />
       <prev>{JSON.stringify(data,null,2)}</prev> 
-      {/* <div>
-          <ul>
-              {data.map((item)=>(
-                  <li key={item.id}>{item.title}</li>
-                  
-                  ))}
-          </ul>
-      </div> */}
       
     </>
   );
@@ -108,3 +100,12 @@ export default UserDetails;
 //     );
 //   }
 // }
+
+//    {/* <div>
+//           <ul>
+//               {data.map((item)=>(
+//                   <li key={item.id}>{item.title}</li>
+                  
+//                   ))}
+//           </ul>
+//       </div> */}
