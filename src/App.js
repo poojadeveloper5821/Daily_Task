@@ -9,6 +9,8 @@ import Form5 from "./Components/Form5";
 import User from "./Components/User";
 import UserDetails from "./Components/UserDetails";
 
+import Hooks1 from "./Components/Hooks1";
+
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <Route path="/*" element={<Error />} />
         </Routes>
       </Router>
+      <br/>
+      <Hooks1 />
     </>
   );
 }
