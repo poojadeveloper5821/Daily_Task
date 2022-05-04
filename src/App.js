@@ -9,8 +9,11 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 // import User from "./Components/User";
 // import UserDetails from "./Components/UserDetails";
 
-import HookuseRef from "./Components/HookuseRef";
-import HookuseMemo from "./Components/HookuseMemo";
+//import HookuseRef from "./Components/HookuseRef";
+//import HookuseMemo from "./Components/HookuseMemo";
+//import HookuseCallback from "./Components/HookuseCallback";
+import HookuseContext from "./Components/HookuseContext";
+
 
 function App() {
   return (
@@ -27,8 +30,10 @@ function App() {
         </Routes>
       </Router> */}
       <br/>
-    <HookuseRef /><br/>
-    <HookuseMemo />
+    {/* <HookuseRef /><br/>
+    <HookuseMemo /><br/>
+    <HookuseCallback /> */}
+    <HookuseContext />
     </>
   );
 }
