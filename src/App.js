@@ -12,9 +12,9 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 //import HookuseRef from "./Components/HookuseRef";
 //import HookuseMemo from "./Components/HookuseMemo";
 //import HookuseCallback from "./Components/HookuseCallback";
-import HookuseContext from "./Components/HookuseContext";
-
-
+//import HookuseContext from "./Components/HookuseContext";
+//import HookuseReducer from "./Components/HookuseReducer";
+import CustomHook from "./Components/CustomHook";
 function App() {
   return (
     <>
@@ -32,8 +32,10 @@ function App() {
       <br/>
     {/* <HookuseRef /><br/>
     <HookuseMemo /><br/>
-    <HookuseCallback /> */}
-    <HookuseContext />
+    <HookuseCallback />
+    <HookuseContext /> 
+    <HookuseReducer />*/}
+    <CustomHook />
     </>
   );
 }
