@@ -5,7 +5,10 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 // import Signup from "./Components/Signup";
 // import Error from "./Components/Error";
 // import Dashboard from "./Components/Dashboard";
-// import Form5 from "./Components/Form5";
+
+//  import Form2 from "./Components/Form2";
+//  import LoginForm from "./Components/LoginForm";
+import UserValidation from "./Components/userValidation";
 // import User from "./Components/User";
 // import UserDetails from "./Components/UserDetails";
 
@@ -14,7 +17,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 //import HookuseCallback from "./Components/HookuseCallback";
 //import HookuseContext from "./Components/HookuseContext";
 //import HookuseReducer from "./Components/HookuseReducer";
-import CustomHook from "./Components/CustomHook";
+//import CustomHook from "./Components/CustomHook";
 
 function App() {
   return (
@@ -35,9 +38,10 @@ function App() {
     <HookuseMemo /><br/>
     <HookuseCallback />
     <HookuseContext /> 
-    <HookuseReducer />*/}
-    <CustomHook /><br/>
+    <HookuseReducer />
+    <CustomHook /><br/>*/}
    
+   <UserValidation />
     </>
   );
 }
