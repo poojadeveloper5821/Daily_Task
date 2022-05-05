@@ -15,6 +15,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 //import HookuseContext from "./Components/HookuseContext";
 //import HookuseReducer from "./Components/HookuseReducer";
 import CustomHook from "./Components/CustomHook";
+
 function App() {
   return (
     <>
@@ -35,7 +36,8 @@ function App() {
     <HookuseCallback />
     <HookuseContext /> 
     <HookuseReducer />*/}
-    <CustomHook />
+    <CustomHook /><br/>
+   
     </>
   );
 }

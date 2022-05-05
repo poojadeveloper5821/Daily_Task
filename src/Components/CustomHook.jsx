@@ -1,4 +1,5 @@
 //import React,{useState} from 'react'
+import ScreenComp from "./ScreenComp";
 import useCounter from "./useCounter";
 
 function CustomHook() {
@@ -19,6 +20,7 @@ function CustomHook() {
         <button onClick={decrement}>Decrement</button>&nbsp;&nbsp;&nbsp;
         <button onClick={reset}>Reset</button>
       </div>
+      <ScreenComp />
     </div>
   );
 }

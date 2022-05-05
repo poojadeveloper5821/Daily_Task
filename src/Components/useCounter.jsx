@@ -7,7 +7,7 @@ export default function useCounter(initialValue){
     };
     const decrement=()=>{
         return setValue(value -1);
-    };
+    }; 
     const reset=()=>{
         return setValue(initialValue);
     }
