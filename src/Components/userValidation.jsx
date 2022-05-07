@@ -1,57 +1,76 @@
 import { useForm } from "react-hook-form";
 import  React,{useState,useEffect} from "react"
+import DropdownData from "./DropdownData";
 
 
 function UserValidation() {
-  const[dropdown,setDropdown]=useState();
-  const[isChecked,setisChecked] =useState(false);
+  
+  const [fname,setFname]=useState();
+  const[lname,setLname]=useState();
+  const[email,setEmail]=useState();
+  const[phone,setPhone]=useState();
+
+  const[dob,setDOB]=useState();
+  const[gender,setGender]=useState();
+  const[hobby,setHobby]=useState();
+  const[occupation,setOccupation]=useState();
+
   const [address,setAddress]=useState();
-const[postalAddress,setPostalAddress]=useState();
+  const[postalAddress,setPostalAddress]=useState();
+  const[description,setDescription]=useState();
+  const[visible,setVisible]=useState();
 
-const [country, setCountry]= useState([]);
-const [countryid, setCountryid]=useState('');
-const [st, setSt]= useState([]);
-const [stateid, setStateid]= useState('');
-const [city, setCity]= useState([]);
+ 
 
+  console.log(errors);
 
-useEffect( ()=>{
-    const getcountry= async()=>{
-        const rescountry= await fetch("http://localhost/devopsdeveloper/country/");
-        const rescon= await rescountry.json();
-        setCountry(await rescon);
-    }
-    getcountry();
-},[]);
+  useEffect(() => {
+    // storing input name
+    localStorage.setItem("fname", JSON.stringify(fname));
+  }, [fname]);
 
-const handlecountry=(event)=>{
-    const getcountryid= event.target.value;
-    setCountryid(getcountryid);
-}
+  useEffect(() => {
+    // storing input pwd
+    localStorage.setItem("lname", JSON.stringify(lname));
+  }, [lname]);
 
-useEffect( ()=>{
-const getstate= async()=>{
-    const resstate= await fetch(`http://localhost/devopsdeveloper/state/getstate/${countryid}`);
-    const resst= await resstate.json();
-    setSt(await resst);
-}
-getstate();
-},[countryid]);
+  useEffect(() => {
+    // storing input pwd
+    localStorage.setItem("email", JSON.stringify(email));
+  }, [email]);
 
-const handlestate=(event)=>{
-   const getstateid= event.target.value;
-   setStateid(getstateid);
-}
-
-useEffect( ()=>{
-const getcity= async()=>{   
-   const rescity= await fetch(`http://localhost/devopsdeveloper/city/getcity/${stateid}`);
-   const rcity= await rescity.json();
-   setCity(await rcity);
-}
-getcity();
-},[stateid]);
-
+  useEffect(() => {
+    // storing input pwd
+    localStorage.setItem("phone", JSON.stringify(phone));
+  }, [phone]);
+  useEffect(() => {
+    // storing input pwd
+    localStorage.setItem("dob", JSON.stringify(dob));
+  }, [dob]);
+  useEffect(() => {
+    // storing input pwd
+    localStorage.setItem("gender", JSON.stringify(gender));
+  }, [gender]);
+  useEffect(() => {
+    // storing input pwd
+    localStorage.setItem("hobby", JSON.stringify(hobby));
+  }, [hobby]);
+  useEffect(() => {
+    // storing input pwd
+    localStorage.setItem("occupation", JSON.stringify(occupation));
+  }, [occupation]);
+  useEffect(() => {
+    // storing input pwd
+    localStorage.setItem("address", JSON.stringify(address));
+  }, [address]);
+  useEffect(() => {
+    // storing input pwd
+    localStorage.setItem("postaladdress", JSON.stringify(postalAddress));
+  }, [postalAddress]);
+  useEffect(() => {
+    // storing input pwd
+    localStorage.setItem("description", JSON.stringify(description));
+  }, [description]);
 
 
 
@@ -63,12 +82,40 @@ getcity();
     trigger,
   } = useForm();
 
+  const handleChangeFname=(e)=>{
+    setFname(e.target.value);
+  }
+  const handleChangeLname=(e)=>{
+    setLname(e.target.value);
+  }
+  const handleChangeEmail=(e)=>{
+    setEmail(e.target.value);
+  }
+  const handleChangePhone=(e)=>{
+    setPhone(e.target.value);
+  }
+  const handleChangeDOB=(e)=>{
+    setDOB(e.target.value);
+  }
+  const handleChangeGender=(e)=>{
+    setGender(e.target.value);
+  }
+  const handleChangeHobby=(e)=>{
+    setHobby(e.target.value);
+  }
+  const handleChangeOcuupation=(e)=>{
+    setOccupation(e.target.value);
+  }
+
 
 const handleChangeAddress=(e)=>{
   setAddress(e.target.value);
 }
 const handleChangePostalAddress=(e)=>{
   setPostalAddress(e.target.value);
+}
+const handleChangeDescription=(e)=>{
+  setDescription(e.target.value);
 }
 
   const onSubmit = (data) => {
@@ -86,8 +133,10 @@ const handleChangePostalAddress=(e)=>{
               <label className="col-form-label">First Name:</label>
               <input
                 type="text"
+                
                 className={`form-control ${errors.fname && "invalid"}`}
                 {...register("fname", { required: "First Name is Required" })}
+                
                 onKeyUp={() => {
                   trigger("fname");
                 }}
@@ -159,91 +208,84 @@ const handleChangePostalAddress=(e)=>{
               )}
             </div>
             <br/>
-    <div className="checkbox">
+            <div className="form-group row">
+            <label className="col-sm-3 col-form-label">Gender</label>
+            <div className="col-sm-2 mt-2">
+              Female <input type="radio" className="mx-2" name="isyes" value="1" onClick={ ()=>setVisible(true)} />
+            </div>
+            <div className="col-sm-2 mt-2">
+            Male<input type="radio" className="mx-2 mt-1" name="isyes" value="0" onClick={ ()=>setVisible(false)} />
+            </div>
+          <div className="col-sm-2 mt-2">
+            Other<input type="radio" className="mx-2 mt-1" name="isyes" value="0" onClick={ ()=>setVisible(false)} />
+            </div>
+          </div>
+             { visible }
 
-      <label>Hobbies:</label><br/>
-      <label>Painting</label>
-      <input type='checkbox' checked={isChecked} onChange={(e)=>{setisChecked(e.target.checked)}}/><br/>
-      <label>Playing Indoor Games</label>
-      <input type='checkbox' checked={isChecked} onChange={(e)=>{setisChecked(e.target.checked)}}/><br/>
-      <label>Travelling</label>
-      <input type='checkbox' checked={isChecked} onChange={(e)=>{setisChecked(e.target.checked)}}/><br/>
-      <label>Playing Outdoor Games</label>
-      <input type='checkbox' checked={isChecked} onChange={(e)=>{setisChecked(e.target.checked)}}/><br/>
-      <label>Cycling</label>
-      <input type='checkbox' checked={isChecked} onChange={(e)=>{setisChecked(e.target.checked)}}/><br/>
+<div className="checkbox_data">
+<p>Select your Hobbies</p>
 </div>
+<div className="form-check">
+<label>Painting</label>&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="checkbox" className="form-check input" />
+</div>
+<div className="form-check">
+<label>Cycling</label>&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="checkbox" className="form-check input" />
+</div>
+<div className="form-check">
+<label>Listening Songs</label>&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="checkbox" className="form-check input" />
+</div>
+<div className="form-check">
+<label>Playing Games</label>&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="checkbox" className="form-check input" />
+</div>
+<div className="form-check">
+<label>Travelling</label>&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="checkbox" className="form-check input" />
+</div><br/><br/>
+<div className="occupation">
+  <p>Select your Occupation</p>
+</div>
+<div className="form-occupation">
+<label>Software Developer</label>&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="checkbox" className="form-occupation input" />
+</div>
+<div className="form-occupation">
+<label>Finance Manager</label>&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="checkbox" className="form-occupation input" />
+</div>
+<div className="form-occupation">
+<label>Project Manager</label>&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="checkbox" className="form-occupation input" />
+</div>
+<div className="form-occupation">
+<label>Software Tester</label>&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="checkbox" className="form-occupation input" />
+</div>
+
 <br/><br/>
-
-<div className="col-md-3">
-                <label  className="form-label">Country </label>
-                <select name="country" className="form-control p-2"  onChange={(e)=>handlecountry(e)} >
-                  <option value="">--Select Country--</option>
-                  {
-                 country.map( (getcon, index)=>(
-                  <option key={index} value={getcon.country_id}>{getcon.country_name } </option>
-                 ))
-                  }
-                </select>
-              </div>
-
-              <div className="col-md-3">
-                <label  className="form-label">State</label>
-                <select className="form-select" name="state"  onChange={(e)=>handlestate(e)}>
-                  <option value="">--Select State--</option>
-                  {
-                    st.map( (getst, index)=>(
-                     <option key={index} value={getst.state_id}>{getst.state_name } </option>
-                    )) 
-                  }                  
-                </select>
-              </div>
-
-              <div className="col-md-3">
-                <label  className="form-label">City</label>
-                <select className="form-select" name="city">
-                  <option value="">--Select City--</option>
-                  {
-                      city.map( (gcity, index)=>(
-                      <option key={index} value={gcity.city_id}> { gcity.city_name} </option>
-                      ))
-                  }                 
-                </select>
-              </div>
-              
-
-
-
-
-
-
-
-
-
-
-
-<div className="dropdown">
-  <label>City</label>&nbsp;&nbsp;&nbsp;
-
-  <select value={dropdown} onChange={(e)=>{setDropdown(e.target.value)}}>
-    <option value='select your city'>Select your City</option>
-    <option value="hyd">Hyderabad</option>
-    <option value="del">Delhi</option>
-    <option value="pune">Pune</option>
-    <option value="mumbai">Mumbai</option>
-    <option value="bng">Banglore</option>
-  </select>
-</div>
-<br/>
 <div className="textarea">
   <label>Address</label>
   <textarea value={address} onChange={handleChangeAddress}/>
 </div>
 <br/>
-<div className="textarea">
-  <label>PostalAddress</label>
+<div className="textarea_postal">
+  <label>PostalAddress</label>&nbsp;
   <textarea value={postalAddress} onChange={handleChangePostalAddress}/>
 </div>
+
+
+<DropdownData />
+
+<br/><br/>
+<div className="textarea_des">
+  <label>Decription</label>
+  <textarea value={description} onChange={handleChangeDescription}/>
+</div>
+<br/>
+
 
 
 

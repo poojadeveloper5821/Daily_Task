@@ -6,8 +6,8 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 // import Error from "./Components/Error";
 // import Dashboard from "./Components/Dashboard";
 
-//  import Form2 from "./Components/Form2";
-//  import LoginForm from "./Components/LoginForm";
+ //import Form1 from "./Components/Form2";
+ //import LoginForm from "./Components/LoginForm";
 import UserValidation from "./Components/userValidation";
 // import User from "./Components/User";
 // import UserDetails from "./Components/UserDetails";
@@ -40,7 +40,7 @@ function App() {
     <HookuseContext /> 
     <HookuseReducer />
     <CustomHook /><br/>*/}
-   
+
    <UserValidation />
     </>
   );
