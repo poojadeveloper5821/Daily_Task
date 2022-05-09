@@ -21,18 +21,18 @@ class DropdownData extends React.Component {
           name: "Germany",
           states: [
             {
-              name: "A",
+              name: "Bavaria",
               cities: ["Duesseldorf", "Leinfelden-Echterdingen", "Eschborn"],
             },
           ],
         },
-        { name: "Spain", states: [{ name: "B", cities: ["Barcelona"] }] },
-        { name: "USA", states: [{ name: "C", cities: ["Downers Grove"] }] },
-        { name: "Mexico", states: [{ name: "D", cities: ["Puebla"] }] },
+        { name: "Spain", states: [{ name: "Ceuta", cities: ["Barcelona"] }] },
+        { name: "USA", states: [{ name: "Dover", cities: ["Downers Grove"] }] },
+        { name: "Mexico", states: [{ name: "Colima", cities: ["Puebla"] }] },
         {
           name: "India",
           states: [
-            { name: "E", cities: ["Delhi","Kolkata","Mumbai","Bangalore","Pune","Noida","Hyderabad"] },
+            { name: "Maharashtra", cities: ["Mumbai","Pune","Nagpur","Nashik"] },
           ],
         },
       ],
@@ -97,6 +97,7 @@ class DropdownData extends React.Component {
           </select>
         </div>
       </div>
+      
     );
   }
 }
