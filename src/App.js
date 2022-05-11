@@ -5,8 +5,7 @@ import UserValidation from "./Components/UserValidation";
 function App() {
   return (
     <>
- 
-       <UserValidation /> 
+      <UserValidation />
     </>
   );
 }
