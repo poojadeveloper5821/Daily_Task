@@ -81,12 +81,7 @@ function FormValidation() {
          console.log(e);
          reset();
       };
-    //      handleSubmit=(e)=>{
-    //     alert('Your favorite flavor is: ' + this.state.value);
-    //      e.preventDefault();
-    //    };
-
-
+   
   return (
     <>
       
