@@ -1,11 +1,10 @@
 import "./App.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import UserValidation from "./Components/UserValidation";
-
+import FormValidation from "./Components/FormValidation";
 function App() {
   return (
     <>
-      <UserValidation />
+    <FormValidation />
     </>
   );
 }
